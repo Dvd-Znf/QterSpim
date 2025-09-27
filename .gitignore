@@ -16,4 +16,10 @@ Setup/
 
 Documentation/
 
+QtSpim/help/qtspim.qch
+QtSpim/help/qtspim.qhc
+QtSpim/parser_yacc.cpp
+QtSpim/parser_yacc.h
+QtSpim/scanner_lex.cpp
+
 # Also see the other .gitignore under QtSpim/
