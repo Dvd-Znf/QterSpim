@@ -135,8 +135,7 @@ int main(int argc, char* argv[]) {
       "QMenu { "
       "  background: #313244;"
       "  spacing: 3px;"
-      "}" // margin-top, margin-right, margin-bottom, and margin-left
-      "QToolButton{margin: 5px 10px 5px;}"
+      "}"
     );
 
   return a.exec();

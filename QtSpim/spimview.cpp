@@ -32,6 +32,7 @@
 */
 
 #include "spimview.h"
+#include "qchar.h"
 #include "qfileinfo.h"
 #include "qtextdocument.h"
 #include "ui_spimview.h"
@@ -113,6 +114,11 @@ SpimView::SpimView(QWidget *parent)
   ui->action_Win_Console->setChecked(true);
 
   ui->toolBar->setIconSize(QSize(24, 24)); // original size: 32x32
+
+  ui->toolBar->setStyleSheet(
+      // margin-top, margin-right, margin-bottom, and margin-left
+    "QToolButton{margin: 5px 10px 5px;}"
+  );
 
   // Hide until a file is opened
   EditorDock->hide();
