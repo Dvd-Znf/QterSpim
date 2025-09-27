@@ -1,0 +1,1 @@
+#define QTSPIM_VERSION "10.0.0"
