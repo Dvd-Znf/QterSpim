@@ -241,7 +241,7 @@ void SpimView::file_Print() {
 // Quit application event
 //
 void SpimView::file_Exit() {
-    QMessageBox msgBox(QMessageBox::Question, "Exit QterSpim", "Quit QterSpim?", QMessageBox::Yes | QMessageBox::No);
+    QMessageBox msgBox(QMessageBox::Question, "QuitSpim", "QuitterSpim?", QMessageBox::Yes | QMessageBox::No);
     msgBox.setDefaultButton(QMessageBox::Yes);
     msgBox.button(QMessageBox::Yes)->setIcon(QIcon());
     msgBox.button(QMessageBox::No)->setIcon(QIcon());

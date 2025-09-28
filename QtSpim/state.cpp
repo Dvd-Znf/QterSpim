@@ -202,7 +202,7 @@ void SpimView::writeSettings(bool omitWindowState) {
 void SpimView::win_Restore() {
   QMessageBox msgBox;
   msgBox.setText(
-      "QtSpim will now exit. Restart QtSpim and the windows will be restored "
+      "QterSpim will now exit. Restart QterSpim and the windows will be restored "
       "to default configuration.");
   msgBox.setStandardButtons(QMessageBox::Ok | QMessageBox::Abort);
   msgBox.setDefaultButton(QMessageBox::Ok);

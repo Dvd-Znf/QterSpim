@@ -583,7 +583,7 @@
   </action>
   <action name="action_Help_AboutSPIM">
    <property name="text">
-    <string>About QtSpim</string>
+    <string>About QterSpim</string>
    </property>
   </action>
   <action name="action_File_Print">
