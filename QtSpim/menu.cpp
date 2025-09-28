@@ -31,6 +31,7 @@
    POSSIBILITY OF SUCH DAMAGE.
 */
 
+#include "qmessagebox.h"
 #include "spimview.h"
 #include "ui_savelogfile.h"
 #include "ui_printwindows.h"
@@ -235,18 +236,13 @@ void SpimView::file_Print() {
   }
 }
 
+// Quit application event
+//
 void SpimView::file_Exit() {
-#if 0
-    QMessageBox msgBox(QMessageBox::Question, "Exit", "Exit?", QMessageBox::Ok | QMessageBox::Cancel);
-    msgBox.setDefaultButton(QMessageBox::Ok);
-    if (msgBox.exec())
-    {
-        this->SaveStateAndExit(0);
-    }
-#endif
-#if 1
-  this->SaveStateAndExit(0);
-#endif
+    QMessageBox msgBox(QMessageBox::Question, "Exit QterSpim", "Quit QterSpim?", QMessageBox::Yes | QMessageBox::No);
+    msgBox.setDefaultButton(QMessageBox::Yes);
+    if (msgBox.exec() == QMessageBox::Yes) 
+      this->SaveStateAndExit(0);
 }
 
 // Simulator menu
