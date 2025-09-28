@@ -31,7 +31,9 @@
    POSSIBILITY OF SUCH DAMAGE.
 */
 
+#include "qicon.h"
 #include "qmessagebox.h"
+#include "qpixmap.h"
 #include "spimview.h"
 #include "ui_savelogfile.h"
 #include "ui_printwindows.h"
@@ -241,6 +243,9 @@ void SpimView::file_Print() {
 void SpimView::file_Exit() {
     QMessageBox msgBox(QMessageBox::Question, "Exit QterSpim", "Quit QterSpim?", QMessageBox::Yes | QMessageBox::No);
     msgBox.setDefaultButton(QMessageBox::Yes);
+    msgBox.button(QMessageBox::Yes)->setIcon(QIcon());
+    msgBox.button(QMessageBox::No)->setIcon(QIcon());
+    msgBox.setIconPixmap(QPixmap(":/icons/Help.png"));
     if (msgBox.exec() == QMessageBox::Yes) 
       this->SaveStateAndExit(0);
 }
