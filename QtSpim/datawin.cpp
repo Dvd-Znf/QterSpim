@@ -54,8 +54,7 @@ void SpimView::DisplayDataSegments(bool force) {
   if (force || data_modified) {
     dataTextEdit* te =
         ui->DataSegDockWidget->findChild<dataTextEdit*>("DataSegmentTextEdit");
-    QString windowContents = windowFormattingStart(
-        st_textWinFont, st_textWinFontColor, st_textWinBackgroundColor);
+    QString windowContents = windowFormattingStart(st_textWinFont);
     int scrollPosition = te->verticalScrollBar()->value();
 
     windowContents += formatUserDataSeg() % formatUserStack() %

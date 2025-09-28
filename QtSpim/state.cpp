@@ -62,10 +62,6 @@ void SpimView::readSettings() {
   st_regDisplayBase = setCheckedRegBase(st_regDisplayBase);
 
   st_regWinFont = settings.value("Font", QFont("Courier", 10)).value<QFont>();
-  st_regWinFontColor =
-      settings.value("FontColor", QColor("white")).value<QColor>();
-  st_regWinBackgroundColor =
-      settings.value("BackgroundColor", QColor("black")).value<QColor>();
 
   ui->action_Win_IntRegisters->setChecked(!ui->IntRegDockWidget->isHidden());
   ui->action_Win_FPRegisters->setChecked(!ui->FPRegDockWidget->isHidden());
@@ -150,8 +146,6 @@ void SpimView::writeSettings(bool omitWindowState) {
   settings.setValue("RegisterDisplayBase", st_regDisplayBase);
 
   settings.setValue("Font", st_regWinFont);
-  settings.setValue("FontColor", st_regWinFontColor);
-  settings.setValue("BackgroundColor", st_regWinBackgroundColor);
   settings.endGroup();
 
   settings.beginGroup("TextWin");

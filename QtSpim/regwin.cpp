@@ -50,8 +50,7 @@ void SpimView::DisplayIntRegisters() {
   regTextEdit* te =
       ui->IntRegDockWidget->findChild<regTextEdit*>("IntRegTextEdit");
   te->isIntRegs = true;
-  QString windowContents = windowFormattingStart(
-      st_regWinFont, st_regWinFontColor, st_regWinBackgroundColor);
+  QString windowContents = windowFormattingStart(st_regWinFont);
   int scrollPosition = te->verticalScrollBar()->value();
 
   windowContents += formatSpecialIntRegister(PC, "PC", PC != oldPC);
@@ -121,8 +120,7 @@ void SpimView::DisplayFPRegisters() {
   regTextEdit* te =
       ui->FPRegDockWidget->findChild<regTextEdit*>("FPRegTextEdit");
   te->isIntRegs = false;
-  QString windowContents = windowFormattingStart(
-      st_regWinFont, st_regWinFontColor, st_regWinBackgroundColor);
+  QString windowContents = windowFormattingStart(st_regWinFont);
   int scrollPosition = te->verticalScrollBar()->value();
 
   windowContents +=

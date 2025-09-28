@@ -134,8 +134,6 @@ class SpimView : public QMainWindow {
   QString st_changedRegisterColor;
   int st_regDisplayBase;
   QFont st_regWinFont;
-  QColor st_regWinFontColor; //fixme: i kinda dont use these anymore, sowwy
-  QColor st_regWinBackgroundColor; 
 
   // Text window
   //
@@ -164,10 +162,9 @@ class SpimView : public QMainWindow {
   // Editor listener
   void onEditorModificationChanged(bool modified);
 
-  // Establish text formatting for a window
+  // Establish text formatting for a """""window""""" - whatever that means
   //
-  QString windowFormattingStart(QFont font, QColor fontColor,
-                                QColor backgroundColor);
+  QString windowFormattingStart(QFont font);
   QString windowFormattingEnd();
 
   // Integer registers window

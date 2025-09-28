@@ -50,8 +50,7 @@ void SpimView::DisplayTextSegments(bool force) {
 
     te->clear();
     QString windowContents =
-        windowFormattingStart(st_textWinFont, st_textWinFontColor,
-                              st_textWinBackgroundColor) %
+        windowFormattingStart(st_textWinFont) %
         formatUserTextSeg() % formatKernelTextSeg() % windowFormattingEnd();
     te->insertHtml(windowContents);
     highlightInstruction(PC);

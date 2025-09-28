@@ -512,20 +512,6 @@ void SpimView::sim_Settings() {
   QObject::connect(regWinFontDialog, SIGNAL(fontSelected(QFont)), &sd,
                    SLOT(setRegWinFont(QFont)));
 
-  sd.regWinFontColorLineEdit->setText(st_regWinFontColor.name());
-  QColorDialog* regWinColorDialog = new QColorDialog(st_regWinFontColor);
-  QObject::connect(sd.regWinFontColorToolButton, SIGNAL(clicked()),
-                   regWinColorDialog, SLOT(exec()));
-  QObject::connect(regWinColorDialog, SIGNAL(colorSelected(QColor)), &sd,
-                   SLOT(setRegWinColor(QColor)));
-
-  sd.regWinBackgroundLineEdit->setText(st_regWinBackgroundColor.name());
-  QColorDialog* regWinBackgroundDialog =
-      new QColorDialog(st_regWinBackgroundColor);
-  QObject::connect(sd.regWinBackgroundToolButton, SIGNAL(clicked()),
-                   regWinBackgroundDialog, SLOT(exec()));
-  QObject::connect(regWinBackgroundDialog, SIGNAL(colorSelected(QColor)), &sd,
-                   SLOT(setRegWinBackground(QColor)));
 
   sd.textWinFontLineEdit->setText(st_textWinFont.family());
   QFontDialog* textWinFontDialog = new QFontDialog(st_textWinFont);
@@ -533,21 +519,6 @@ void SpimView::sim_Settings() {
                    textWinFontDialog, SLOT(exec()));
   QObject::connect(textWinFontDialog, SIGNAL(fontSelected(QFont)), &sd,
                    SLOT(setTextWinFont(QFont)));
-
-  sd.textWinFontColorLineEdit->setText(st_textWinFontColor.name());
-  QColorDialog* textWinColorDialog = new QColorDialog(st_textWinFontColor);
-  QObject::connect(sd.textWinFontColorToolButton, SIGNAL(clicked()),
-                   textWinColorDialog, SLOT(exec()));
-  QObject::connect(textWinColorDialog, SIGNAL(colorSelected(QColor)), &sd,
-                   SLOT(setTextWinColor(QColor)));
-
-  sd.textWinBackgroundLineEdit->setText(st_textWinBackgroundColor.name());
-  QColorDialog* textWinBackgroundDialog =
-      new QColorDialog(st_textWinBackgroundColor);
-  QObject::connect(sd.textWinBackgroundToolButton, SIGNAL(clicked()),
-                   textWinBackgroundDialog, SLOT(exec()));
-  QObject::connect(textWinBackgroundDialog, SIGNAL(colorSelected(QColor)), &sd,
-                   SLOT(setTextWinBackground(QColor)));
 
   if (d.exec() == QDialog::Accepted) {
     bare_machine = sd.bareMachineCheckBox->isChecked();
@@ -567,12 +538,6 @@ void SpimView::sim_Settings() {
 
     if (sd.regWinFont != NULL) {
       st_regWinFont = *sd.regWinFont;
-    }
-    if (sd.regWinColor != NULL) {
-      st_regWinFontColor = *sd.regWinColor;
-    }
-    if (sd.regWinBackground != NULL) {
-      st_regWinBackgroundColor = *sd.regWinBackground;
     }
 
     if (sd.textWinFont != NULL) {

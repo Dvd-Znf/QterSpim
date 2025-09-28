@@ -236,8 +236,7 @@ void SpimView::wireCommands() {
 }
 
 // wat da fuck
-QString SpimView::windowFormattingStart(QFont font, QColor /*fontColor*/,
-                                        QColor /*backgroundColor*/) {
+QString SpimView::windowFormattingStart(QFont font) {
     return QString("<span style='font-family:" + font.family() +
                    "; font-size:" + QString::number(font.pointSize(), 10) +
                    "pt;'>");

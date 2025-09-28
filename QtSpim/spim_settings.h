@@ -70,29 +70,9 @@ class SpimSettingDialog : public QObject, public SettingDialog {
     regWinFontLineEdit->setText(f.family());
   }
 
-  void setRegWinColor(QColor c) {
-    regWinColor = new QColor(c);
-    regWinFontColorLineEdit->setText(c.name());
-  }
-
-  void setRegWinBackground(QColor c) {
-    regWinBackground = new QColor(c);
-    regWinBackgroundLineEdit->setText(c.name());
-  }
-
   void setTextWinFont(QFont f) {
     textWinFont = new QFont(f);
     textWinFontLineEdit->setText(f.family());
-  }
-
-  void setTextWinColor(QColor c) {
-    textWinColor = new QColor(c);
-    textWinFontColorLineEdit->setText(c.name());
-  }
-
-  void setTextWinBackground(QColor c) {
-    textWinBackground = new QColor(c);
-    textWinBackgroundLineEdit->setText(c.name());
   }
 };
 
