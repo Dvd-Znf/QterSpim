@@ -295,7 +295,7 @@
   <action name="action_File_Load">
    <property name="icon">
     <iconset resource="windows_images.qrc">
-     <normaloff>:/icons/LoadFile.png</normaloff>:/icons/LoadFile.png</iconset>
+     <normaloff>:/icons/FolderOpen.png</normaloff>:/icons/FolderOpen.png</iconset>
    </property>
    <property name="text">
     <string>&amp;Load File</string>
