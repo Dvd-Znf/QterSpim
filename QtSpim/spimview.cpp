@@ -34,6 +34,8 @@
 #include "spimview.h"
 #include "qchar.h"
 #include "qfileinfo.h"
+#include "qobject.h"
+#include "qobjectdefs.h"
 #include "qtextdocument.h"
 #include "ui_spimview.h"
 
@@ -147,6 +149,9 @@ void SpimView::wireCommands() {
 
   QObject::connect(ui->action_File_Save, SIGNAL(triggered(bool)), this,
                  SLOT(file_SaveEditor()));
+
+  QObject::connect(ui->action_New_File, SIGNAL(triggered(bool)), this,
+                  SLOT(file_New()));
 
   QObject::connect(ui->action_Sim_ClearRegisters, SIGNAL(triggered(bool)), this,
                    SLOT(sim_ClearRegisters()));

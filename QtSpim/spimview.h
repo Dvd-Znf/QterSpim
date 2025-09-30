@@ -245,8 +245,8 @@ class SpimView : public QMainWindow {
   void file_SaveLogFile();
   void file_Print();
   void file_Exit();
-
   void file_SaveEditor();
+  void file_New();
 
   void sim_ClearRegisters();
   void sim_ReinitializeSimulator();

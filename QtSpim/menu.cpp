@@ -143,6 +143,38 @@ void SpimView::file_ReloadFile() {
   file_LoadFile(CurrentLoadedFile);
 }
 
+// Create a new file
+//
+void SpimView::file_New() {
+  QString newFile;
+  
+  newFile = QFileDialog::getSaveFileName(NULL, "Create New File","","");
+
+  CodeEditor->document()->setModified(false);
+
+  if (newFile.isEmpty()) return;
+
+  CurrentLoadedFile = newFile;
+
+  QFile file(newFile);
+
+  // Looks kinda silly, but this creates the file :>
+  file.open(QIODevice::WriteOnly);
+  file.close();
+
+  CodeEditor->clear();
+
+  EditorDock->show(); 
+  EditorDock->raise();
+
+  st_recentFiles.removeAll(newFile);
+  st_recentFiles.prepend(newFile);
+  rebuildRecentFilesMenu();
+
+  DisplayTextSegments(true);
+  DisplayDataSegments(false);
+}
+
 void SpimView::rebuildRecentFilesMenu() {
   ui->menuRecent_Files->clear();
   int i;
