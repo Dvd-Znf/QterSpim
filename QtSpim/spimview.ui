@@ -74,6 +74,7 @@
       <string>Recent Files</string>
      </property>
     </widget>
+    <addaction name="action_New_File"/>
     <addaction name="action_File_Load"/>
     <addaction name="action_File_Save"/>
     <addaction name="menuRecent_Files"/>
@@ -279,6 +280,7 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="action_New_File"/>
    <addaction name="action_File_Load"/>
    <addaction name="separator"/>
    <addaction name="action_File_Save"/>
@@ -610,6 +612,23 @@
     <string>Ctrl+S</string>
    </property>
   </action>
+
+  <action name="action_New_File">
+   <property name="icon">
+    <iconset resource="windows_images.qrc">
+     <normaloff>:/icons/LoadFile.png</normaloff>:/icons/LoadFile.png</iconset>
+   </property>
+   <property name="text">
+    <string>Create &amp;New File</string>
+   </property>
+   <property name="toolTip">
+    <string>Create New File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
