@@ -126,8 +126,9 @@ linux|macx:buildhelpcollection.commands= bash -c '\"pushd ${QMAKE_FILE_PATH}; qc
 win32:buildhelpcollection.commands= sh -c '\"pushd ${QMAKE_FILE_PATH} ; qcollectiongenerator ${QMAKE_FILE_BASE}.qhcp ; popd ;\"'
 buildhelpcollection.CONFIG  = no_link recursive
 
-QMAKE_EXTRA_COMPILERS       += buildcompressedhelp buildhelpcollection
-POST_TARGETDEPS             += help/qtspim.qch help/qtspim.qhc
+# disabled because: i don't care, i don't need this kind of help XD (i only need clinical help.)
+# QMAKE_EXTRA_COMPILERS       += buildcompressedhelp buildhelpcollection
+# POST_TARGETDEPS             += help/qtspim.qch help/qtspim.qhc
 
 
 # Microsoft Visual C compiler flags
