@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=10.0.0
+Name=QterSpim
+Comment=Run QterSpim
+Icon=/usr/share/qtspim/qtspim.png
+Exec=/usr/bin/qtspim
+Terminal=false
