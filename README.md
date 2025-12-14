@@ -20,7 +20,7 @@ QterSpim uses the [Qt framework](https://doc.qt.io/) to provide a native GUI int
 ### Prelude
 
 You will need to install the relevant toolkits for your platform,  
-You should have access to these tools: `qmake`, `uic`, `make`, `bison` and a C++ compiler.
+You should have access to these tools: `qmake`, `uic`, `bison`, `flex` and a C/C++ toolchain including `make`.
 
 You can use whatever editor you wish.  
 While the original project recommended using QtCreator, I wouldn't.  
