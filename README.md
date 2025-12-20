@@ -1,5 +1,7 @@
 # QterSpim  
   
+![screenshot of qterspim](./res/20251220_23h50m20s_grim.png)  
+
 A cuter frontend for the assembly language MIPS R2000/R3000 simulator.  
 Forked from [SPIM](https://sourceforge.net/projects/spimsimulator/), this repo hosts the UI interface code and aims to make it a more modern and richer experience with built-in assembly editing.  
   
@@ -17,16 +19,15 @@ QterSpim uses the [Qt framework](https://doc.qt.io/) to provide a native GUI int
 - The `QtSpim/` directory contains the root of the Qt project  
 - The `CPU/` backend is kept and managed [separatly](https://github.com/Dvd-Znf/Spim-CPU)  
 
-### Prelude
+### Note for nix users:
+There is a `shell.nix` under `QtSpim/`.
+
+### Necesary tools
 
 You will need to install the relevant toolkits for your platform,  
-You should have access to these tools: `qmake`, `uic`, `bison`, `flex` and a C/C++ toolchain including `make`.
+You should have access to all these: `qmake`, `uic`, `bison`, `flex` and a C/C++ toolchain including `make`.  
 
 You can use whatever editor you wish.  
-While the original project recommended using QtCreator, I wouldn't.  
-QtDesigner likes to get a bit quirky at night on my machine,  
-
-The `QtSpim.pro` file has been patched and _should_ work fine by default on all platforms now.  
 
 ### Building
 #### First time setup
@@ -47,7 +48,7 @@ Changes to resources outside ui, C++ or header files will require a clean build,
 ### Notes on the VCS transition
 Original Subversion revisions/commits have been lost in the process of forking and swithing to git.   
 The root git commit is also _not_ the last SVN revision from SourceForge, it already contains _a lot_ of patches,  
-See root commit message for a changelog.  
+See [root commit](https://github.com/Dvd-Znf/QterSpim/commit/7043557148789a47cd52afd26f785db81592b58c) message for a changelog.  
 
 ### The original project has been retired:
 > SPIM is no longer supported.   
